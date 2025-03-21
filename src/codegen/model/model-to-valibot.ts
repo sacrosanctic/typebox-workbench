@@ -144,7 +144,7 @@ export namespace ModelToValibot {
           }
           if(notUndefined && !notNull) {
             const a = Types.Exclude(value,Types.Null())
-            return `${property}: ${Visit(value)}`
+            return `${property}: v.nullable(${Visit(a)})`
           }
         }
         return `${property}: ${Visit(value)}`
